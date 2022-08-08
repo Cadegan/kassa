@@ -1,10 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
+import {logoKasa} from "../../assets/logo.svg"
 
-export default function App() {
+function Header() {
   return (
-    <Router>
-      <div>
+      <header className="header">
+      <div className="logo">
+         <img src={logoKasa} alt="logo"></img>
+      </div>
         <nav>
           <ul>
             <li>
@@ -18,7 +21,8 @@ export default function App() {
             </li>
           </ul>
         </nav>
-      </div>
-    </Router>
+        </header>
   );
 }
+
+export default Header;
