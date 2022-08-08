@@ -7,8 +7,6 @@ function Header() {
     textDecoration: "underline",
   }
 
-  let activeClassName = "underline"
-
   return (
     <Router>
      <header className="header">
@@ -16,8 +14,24 @@ function Header() {
          <img src={logoKasa} alt="logo"></img>
       </div>
         <nav className="navbar">
-              <NavLink className="navHome" to="/">Accueil</NavLink>
-              <NavLink className="navAbout" to="/about">A propos</NavLink>
+              <NavLink 
+                className="navHome" 
+                to="/"
+                style={({ isActive }) => 
+                isActive ? activeStyle : undefined
+                }
+              >
+                Accueil
+              </NavLink>
+                <NavLink 
+                className="navAbout" 
+                to="/about"
+                style={({ isActive }) => 
+                isActive ? activeStyle : undefined
+                }
+              >
+                A propos
+              </NavLink>
         </nav>
         </header>
     </Router>
