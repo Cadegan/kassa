@@ -4,10 +4,6 @@
   padding: 0;
 }
 
-body {
-  margin: 40px 6% 0px 6%;
-}
-
 a {
   text-decoration: none;
 }
@@ -16,6 +12,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 40px 6% 40px 6%;
 }
 .header img {
   height: 68px;
@@ -33,4 +30,21 @@ a {
 }
 .navbar a:hover {
   text-decoration: underline;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 209px;
+  background-color: black;
+}
+.footer img {
+  filter: brightness(0) invert(1);
+  width: 122px;
+  margin-bottom: 30px;
+}
+.footer p {
+  color: white;
 }/*# sourceMappingURL=main.css.map */
