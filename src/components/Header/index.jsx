@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logoKasa from "../../assets/logo.svg";
 
 function Header() {
@@ -8,10 +8,9 @@ function Header() {
   }
 
   return (
-    <Router>
      <header className="header">
       <div className="logo">
-         <img src={logoKasa} alt="logo"></img>
+         <img src={logoKasa} alt="logo" className="logoHeader"></img>
       </div>
         <nav className="navbar">
               <NavLink 
@@ -34,7 +33,6 @@ function Header() {
               </NavLink>
         </nav>
         </header>
-    </Router>
   );
 }
 
