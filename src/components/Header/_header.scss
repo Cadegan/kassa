@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        height: 68px;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+
+    a {
+        font-size: 24px;
+        font-weight: 500;
+        color: #FF6060;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

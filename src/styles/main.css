@@ -1,0 +1,36 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 20px 6% 0px 6%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header img {
+  height: 68px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+.navbar a {
+  font-size: 24px;
+  font-weight: 500;
+  color: #FF6060;
+}
+.navbar a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=main.css.map */
