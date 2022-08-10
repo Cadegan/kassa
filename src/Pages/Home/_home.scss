@@ -7,7 +7,7 @@
 .homeBanner {
     display: flex;
     position: relative;
-    border-radius: 25px 25px 25px 25px;
+    border-radius: 25px;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -31,5 +31,21 @@
         font-weight: 300;
         color: white;
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .homeBanner {
+        border-radius: 10px;
+
+        img {
+            height: 111px;
+        }
+
+        p {
+            width: auto;
+            font-size: 24px;
+            text-align: left;
+        }
     }
 }

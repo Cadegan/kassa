@@ -26,3 +26,20 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .header {
+        img {
+            height: 47px;
+        }
+    }
+
+    .navbar {
+        width: 140px;
+
+        a {
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+    }
+}

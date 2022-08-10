@@ -34,6 +34,18 @@ a {
   text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  .header img {
+    height: 47px;
+  }
+  .navbar {
+    width: 140px;
+  }
+  .navbar a {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}
 /*Home*/
 .homeSection {
   margin: 0px 6% 0px 6%;
@@ -42,7 +54,7 @@ a {
 .homeBanner {
   display: flex;
   position: relative;
-  border-radius: 25px 25px 25px 25px;
+  border-radius: 25px;
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -69,6 +81,19 @@ a {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .homeBanner {
+    border-radius: 10px;
+  }
+  .homeBanner img {
+    height: 111px;
+  }
+  .homeBanner p {
+    width: auto;
+    font-size: 24px;
+    text-align: left;
+  }
+}
 /*Footer*/
 .footer {
   display: flex;
