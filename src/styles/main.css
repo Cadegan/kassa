@@ -1,3 +1,4 @@
+/*Global*/
 * {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -8,6 +9,7 @@ a {
   text-decoration: none;
 }
 
+/*Header*/
 .header {
   display: flex;
   align-items: center;
@@ -32,6 +34,7 @@ a {
   text-decoration: underline;
 }
 
+/*Home*/
 .homeSection {
   margin: 0px 6% 0px 6%;
 }
@@ -66,6 +69,7 @@ a {
   text-align: center;
 }
 
+/*Footer*/
 .footer {
   display: flex;
   flex-direction: column;
@@ -81,4 +85,29 @@ a {
 }
 .footer p {
   color: white;
+}
+
+/*Error*/
+.errorMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px;
+  text-align: center;
+}
+.errorMessage * {
+  color: #FF6060;
+}
+.errorMessage h1 {
+  font-size: 288px;
+}
+.errorMessage h2 {
+  font-size: 36px;
+  font-weight: 500;
+}
+.errorMessage .homePage-link {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-top: 100px;
 }/*# sourceMappingURL=main.css.map */

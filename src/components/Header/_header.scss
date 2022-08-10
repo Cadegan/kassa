@@ -1,3 +1,5 @@
+/*Header*/
+
 .header {
     display: flex;
     align-items: center;
@@ -17,7 +19,7 @@
     a {
         font-size: 24px;
         font-weight: 500;
-        color: #FF6060;
+        color: $primary;
 
         &:hover {
             text-decoration: underline;
