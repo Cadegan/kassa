@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logoKasa from "../../assets/logo.svg";
 
 function Header() {
@@ -10,7 +10,9 @@ function Header() {
   return (
      <header className="header">
       <div className="logo">
-         <img src={logoKasa} alt="logo" className="logoHeader"></img>
+        <Link to="/">
+          <img src={logoKasa} alt="logo" className="logoHeader"></img>
+        </Link>
       </div>
         <nav className="navbar">
               <NavLink 
