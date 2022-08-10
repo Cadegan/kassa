@@ -1,5 +1,6 @@
 import React from 'react';
-import imgBanner from "../assets/home-banner.jpg"
+import imgBanner from "../../assets/home-banner.jpg"
+
 
 function Home () {
     return (
