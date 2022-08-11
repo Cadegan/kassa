@@ -93,6 +93,38 @@ a {
     left: 32%;
   }
 }
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion-item {
+  width: 70%;
+  margin-bottom: 31px;
+}
+
+.accordion-title {
+  background-color: #FF6060;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px 15px 9px 15px;
+  cursor: pointer;
+}
+.accordion-title img {
+  width: 16px;
+}
+.accordion-title * {
+  color: white;
+}
+
+.accordion-content {
+  background-color: #F6F6F6;
+  color: #FF6060;
+}
+
 /*Footer*/
 .footer {
   display: flex;

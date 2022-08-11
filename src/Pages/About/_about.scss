@@ -1,0 +1,33 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accordion-item {
+    width: 70%;
+    margin-bottom: 31px;
+}
+
+.accordion-title {
+    background-color: $primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px 15px 9px 15px;
+    cursor: pointer;
+
+    img {
+        width: 16px;
+    }
+
+    * {
+        color: white;
+    }
+}
+
+.accordion-content {
+    background-color: $secondary;
+    color: $primary;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import Accordion from '../../components/Accordion/index';
-import { accordionData } from '../../data/accordionData';
+import accordionData from '../../data/accordionData';
 
 function About () {
     return (
