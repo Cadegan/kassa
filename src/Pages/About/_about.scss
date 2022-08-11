@@ -7,6 +7,7 @@
 .accordion-item {
     width: 70%;
     margin-bottom: 31px;
+    position: relative;
 }
 
 .accordion-title {
@@ -16,6 +17,7 @@
     align-items: center;
     border-radius: 5px;
     padding: 10px 15px 9px 15px;
+    width: 100%;
     cursor: pointer;
 
     img {
@@ -24,10 +26,19 @@
 
     * {
         color: white;
+        font-size: 24px;
+        font-weight: 400;
     }
 }
 
 .accordion-content {
+    padding: 20px 15px 9px 15px;
+    position: relative;
+    width: 100%;
+    top: -10px;
+    z-index: -1;
     background-color: $secondary;
     color: $primary;
+    font-size: 24px;
+    font-weight: 200;
 }
