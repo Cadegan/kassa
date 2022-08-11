@@ -9,13 +9,10 @@ const Accordion = ({ title, content }) => {
         <div className="accordion-item">
             <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
                 <div>{title}</div>
-                <div>{isActive ? <img src={arrow} alt="arrow" className="arrow-down"></img> 
+                {isActive ? <img src={arrow} alt="arrow" className="arrow-down"></img> 
                 :  <img src={arrow} alt="arrow" className="arrow-up"></img>}
-                </div>
             </div>
-            <div>
-                {isActive && <div className="accordion-content">{content}</div>}
-            </div>
+            {isActive && <div className="accordion-content">{content}</div>}
         </div>
     )
 }
