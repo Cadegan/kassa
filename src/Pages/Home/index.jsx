@@ -6,7 +6,7 @@ function Home () {
     return (
         <section className="homeSection">
             <div className='homeBanner'>
-                <img src={imgBanner} alt="Banner"></img>
+                <img src={imgBanner} alt="Bannière entête"></img>
                 <p>Chez vous, partout et ailleurs</p>
             </div>
 

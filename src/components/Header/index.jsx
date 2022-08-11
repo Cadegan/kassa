@@ -11,7 +11,7 @@ function Header() {
      <header className="header">
       <div className="logo">
         <Link to="/">
-          <img src={logoKasa} alt="logo" className="logoHeader"></img>
+          <img src={logoKasa} alt="Logo Kasa" className="logoHeader"></img>
         </Link>
       </div>
         <nav className="navbar">
