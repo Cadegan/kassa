@@ -7,7 +7,6 @@
 .homeBanner {
     display: flex;
     position: relative;
-    border-radius: 25px;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -16,6 +15,7 @@
     img {
         height: 223px;
         width: 100%;
+        border-radius: 25px;
         object-fit: cover;
         object-position: 50% 45%;
         filter: brightness(70%);
@@ -36,16 +36,17 @@
 
 @media (max-width: 768px) {
     .homeBanner {
-        border-radius: 10px;
 
         img {
             height: 111px;
+            border-radius: 10px;
         }
 
         p {
-            width: auto;
+            width: 50%;
             font-size: 24px;
             text-align: left;
+            left: 32%;
         }
     }
 }

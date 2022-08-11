@@ -15,6 +15,16 @@
     }
 
     p {
+        font-size: 24px;
+        font-weight: 500;
         color: white;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        p {
+            font-size: 12px;
+        }
     }
 }

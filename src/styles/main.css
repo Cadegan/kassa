@@ -54,7 +54,6 @@ a {
 .homeBanner {
   display: flex;
   position: relative;
-  border-radius: 25px;
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -63,6 +62,7 @@ a {
 .homeBanner img {
   height: 223px;
   width: 100%;
+  border-radius: 25px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 45%;
@@ -82,16 +82,15 @@ a {
 }
 
 @media (max-width: 768px) {
-  .homeBanner {
-    border-radius: 10px;
-  }
   .homeBanner img {
     height: 111px;
+    border-radius: 10px;
   }
   .homeBanner p {
-    width: auto;
+    width: 50%;
     font-size: 24px;
     text-align: left;
+    left: 32%;
   }
 }
 /*Footer*/
@@ -109,15 +108,22 @@ a {
   margin-bottom: 30px;
 }
 .footer p {
+  font-size: 24px;
+  font-weight: 500;
   color: white;
 }
 
+@media (max-width: 768px) {
+  .footer p {
+    font-size: 12px;
+  }
+}
 /*Error*/
 .errorMessage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px;
+  margin: 169px 0px 159px 0px;
   text-align: center;
 }
 .errorMessage * {
@@ -125,14 +131,30 @@ a {
 }
 .errorMessage h1 {
   font-size: 288px;
+  font-weight: bold;
 }
 .errorMessage h2 {
   font-size: 36px;
   font-weight: 500;
+  width: 80%;
 }
-.errorMessage .homePage-link {
+.errorMessage a {
   font-size: 18px;
   font-weight: 500;
   text-decoration: underline;
-  margin-top: 100px;
+  margin-top: 182px;
+}
+
+@media (max-width: 768px) {
+  .errorMessage h1 {
+    font-size: 96px;
+  }
+  .errorMessage h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .errorMessage a {
+    font-size: 14px;
+    margin-top: 133px;
+  }
 }/*# sourceMappingURL=main.css.map */
