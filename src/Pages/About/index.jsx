@@ -1,10 +1,14 @@
 import React from 'react';
 import Accordion from '../../components/Accordion/index';
 import accordionData from '../../data/accordionData';
+import imgBanner from "../../assets/about-banner.jpg"
 
 function About () {
     return (
-        <div>
+        <div className="aboutSection">
+            <div className='aboutBanner'>
+                    <img src={imgBanner} alt="Bannière entête"></img>
+            </div>
             <div className='accordion'>
                 {accordionData.map(({title, content}) => (
                     <Accordion title={title} content={content}/>

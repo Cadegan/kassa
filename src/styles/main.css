@@ -93,6 +93,37 @@ a {
     left: 32%;
   }
 }
+/*About page*/
+.aboutSection {
+  margin: 0px 6% 0px 6%;
+}
+
+.aboutBanner {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 43px;
+}
+.aboutBanner img {
+  height: 223px;
+  width: 100%;
+  border-radius: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 45%;
+     object-position: 50% 45%;
+  filter: brightness(70%);
+}
+
+@media (max-width: 768px) {
+  .aboutBanner img {
+    min-width: 223px;
+    border-radius: 10px;
+  }
+}
+/*Accordion menu*/
 .accordion {
   display: flex;
   flex-direction: column;
@@ -100,7 +131,7 @@ a {
 }
 
 .accordion-item {
-  width: 70%;
+  width: 80%;
   margin-bottom: 31px;
   position: relative;
 }
@@ -175,7 +206,7 @@ a {
     font-size: 12px;
   }
 }
-/*Error*/
+/*Error page*/
 .errorMessage {
   display: flex;
   flex-direction: column;

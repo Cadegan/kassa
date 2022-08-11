@@ -1,6 +1,5 @@
 import { useState } from "react"
 import arrow from "../../assets/arrow.svg"
-import logoKasa from "../../assets/logo.svg";
 
 
 const Accordion = ({ title, content }) => {
