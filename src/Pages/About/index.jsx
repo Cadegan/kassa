@@ -10,8 +10,8 @@ function About () {
                     <img src={imgBanner} alt="Bannière entête"></img>
             </div>
             <div className='accordion'>
-                {accordionData.map(({title, content}) => (
-                    <Accordion title={title} content={content}/>
+                {accordionData.map(({title, content}, index) => (
+                    <Accordion key={index} title={title} content={content}/>
                 ))}
             </div>
         </div>
