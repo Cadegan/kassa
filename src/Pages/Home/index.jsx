@@ -1,17 +1,15 @@
-import React from 'react';
-import imgBanner from "../../assets/home-banner.jpg"
+import React from "react";
+import imgBanner from "../../assets/home-banner.jpg";
 
-
-function Home () {
-    return (
-        <section className="homeSection">
-            <div className='homeBanner'>
-                <img src={imgBanner} alt="Bannière entête"></img>
-                <p>Chez vous, partout et ailleurs</p>
-            </div>
-
-        </section>
-    )
+function Home() {
+  return (
+    <section className="homeSection">
+      <div className="homeBanner">
+        <img src={imgBanner} alt="Bannière entête"></img>
+        <p>Chez vous, partout et ailleurs</p>
+      </div>
+    </section>
+  );
 }
 
 export default Home;

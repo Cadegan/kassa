@@ -1,15 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import './styles/main.css';
-import Header from './components/Header/index';
-import Footer from './components/Footer/index';
-import Home from './pages/Home/index';
-import About from './pages/About/index';
-import Error from './components/Error/index';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./styles/main.css";
+import Header from "./components/Header/index";
+import Footer from "./components/Footer/index";
+import Home from "./pages/Home/index";
+import About from "./pages/About/index";
+import Error from "./components/Error/index";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
@@ -17,7 +17,7 @@ root.render(
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
-        <Route path='*' element={<Error />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </Router>
