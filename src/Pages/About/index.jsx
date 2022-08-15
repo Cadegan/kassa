@@ -5,7 +5,7 @@ import imgBanner from "../../assets/about-banner.jpg";
 
 function About() {
   return (
-    <div className="aboutSection">
+    <section className="aboutSection">
       <div className="aboutBanner">
         <img src={imgBanner} alt="Bannière entête"></img>
       </div>
@@ -14,7 +14,7 @@ function About() {
           <Accordion key={index} title={title} content={content} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
