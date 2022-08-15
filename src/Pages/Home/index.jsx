@@ -2,6 +2,7 @@ import React from "react";
 import imgBanner from "../../assets/home-banner.jpg";
 import { useState, useEffect } from "react";
 import Card from "../../components/Card/index";
+// const response = await fetch("../src/data/logements.json");
 
 function Home() {
   const [data, setData] = useState(null);
@@ -9,14 +10,19 @@ function Home() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const getData = async () => {
+    async function getData() {
       try {
-        const reponse = await fetch();
-        if (!reponse.ok) {
-          throw new Error(`HTTP error: ${reponse.status}`);
+        const response = await fetch("./data/logements.json", {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        });
+        if (!response.ok) {
+          throw new Error(` - Error status ${response.status}`);
         }
-        let actualdata = await reponse.json;
-        setData(actualdata);
+        let actualData = await response.json();
+        setData(actualData);
         setError(null);
       } catch (err) {
         setError(err.message);
@@ -24,7 +30,7 @@ function Home() {
       } finally {
         setLoading(false);
       }
-    };
+    }
     getData();
   }, []);
 
@@ -47,8 +53,8 @@ function Home() {
         )}
         <div className="gridCardsContainer">
           {data &&
-            data.map(({ id, title, picture }) => (
-              <Card id={id} key={id} title={title} picture={picture}></Card>
+            data.map(({ id, title, cover }) => (
+              <Card id={id} key={id} title={title} cover={cover}></Card>
             ))}
         </div>
       </div>

@@ -1,10 +1,10 @@
 function Card(props) {
-  const { id, title, picture } = props;
+  const { id, title, cover } = props;
 
   return (
     <article className="card" key={id}>
       <p className="card-title"></p>
-      <img className="card-picture" scr={picture} alt={`${title}`} />
+      <img className="card-picture" scr={cover} alt={`${title}`} />
     </article>
   );
 }
