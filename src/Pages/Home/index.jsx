@@ -5,8 +5,28 @@ import Card from "../../components/Card/index";
 
 function Home() {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const reponse = await fetch();
+        if (!reponse.ok) {
+          throw new Error(`HTTP error: ${reponse.status}`);
+        }
+        let actualdata = await reponse.json;
+        setData(actualdata);
+        setError(null);
+      } catch (err) {
+        setError(err.message);
+        setData(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+    getData();
+  }, []);
 
   return (
     <section className="homeSection">
