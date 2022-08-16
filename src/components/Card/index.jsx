@@ -1,10 +1,14 @@
+import { Link } from "react-router-dom";
+
 function Card(props) {
-  const { id, title, cover } = props;
+  const { id, title, image } = props;
 
   return (
     <article className="card" key={id}>
-      <p className="card-title"></p>
-      <img className="card-picture" scr={cover} alt={`${title}`} />
+      <Link to={`/housing/${id}`}>
+        <p className="cardTitle">{title}</p>
+        <img className="cardPicture" src={image} alt={title} />
+      </Link>
     </article>
   );
 }

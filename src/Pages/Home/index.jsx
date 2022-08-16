@@ -2,22 +2,31 @@ import React from "react";
 import imgBanner from "../../assets/home-banner.jpg";
 import { useState, useEffect } from "react";
 import Card from "../../components/Card/index";
-// const response = await fetch("../src/data/logements.json");
 
 function Home() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  //   v1
   useEffect(() => {
     async function getData() {
       try {
-        const response = await fetch("./data/logements.json", {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-        });
+        // const response = await fetch("./data/logements.json", {
+        //   headers: {
+        //     "Content-Type": "application/json",
+        //     Accept: "application/json",
+        //   },
+        // });
+        const response = await fetch(
+          "https://fakestoreapi.com/products?_limit=10",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+          }
+        );
         if (!response.ok) {
           throw new Error(` - Error status ${response.status}`);
         }
@@ -33,6 +42,29 @@ function Home() {
     }
     getData();
   }, []);
+
+  /////
+
+  //   v2
+  //   const getData = async () => {
+  //     const response = await fetch("./data/logements.json", {
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         Accept: "application/json",
+  //       },
+  //     })
+  //       .then((response) => {
+  //         return response.json();
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       });
+  //     setData(response);
+  //   };
+
+  //   useEffect(() => {
+  //     getData();
+  //   }, []);
 
   return (
     <section className="homeSection">
@@ -53,8 +85,8 @@ function Home() {
         )}
         <div className="gridCardsContainer">
           {data &&
-            data.map(({ id, title, cover }) => (
-              <Card id={id} key={id} title={title} cover={cover}></Card>
+            data.map(({ id, title, image }) => (
+              <Card id={id} key={id} title={title} image={image}></Card>
             ))}
         </div>
       </div>
