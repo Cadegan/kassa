@@ -192,11 +192,51 @@ a {
     font-size: 12px;
   }
 }
+/* CircleLoader */
+.circleLoader {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.circleLoader:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #FF6060 transparent #FF6060 transparent;
+  -webkit-animation: circleLoader 1.2s linear infinite;
+          animation: circleLoader 1.2s linear infinite;
+}
+
+@-webkit-keyframes circleLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes circleLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* Card House */
 .card a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.card img {
+  width: 90%;
 }
 
 /*Home*/
@@ -240,11 +280,9 @@ a {
 
 .cardsContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2.5rem;
-}
-.cardsContainer img {
-  width: 90%;
+  place-items: center;
 }
 
 @media (max-width: 768px) {

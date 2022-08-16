@@ -2,10 +2,11 @@ import React from "react";
 import imgBanner from "../../assets/home-banner.jpg";
 import { useState, useEffect } from "react";
 import Card from "../../components/Card/index";
+import Loader from "../../components/Loader/index";
 
 function Home() {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   //   v1
@@ -74,11 +75,7 @@ function Home() {
         <p>Chez vous, partout et ailleurs</p>
       </div>
       <div className="homeCardSection">
-        {loading && (
-          <div className="loadingMessage">
-            Chargement. Un moment s'il vous plait
-          </div>
-        )}
+        {isLoading && <Loader />}
         {error && (
           <div className="errorMessage">
             {`Erreur de chargement des données ${error}`}
