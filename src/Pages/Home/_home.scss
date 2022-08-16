@@ -34,6 +34,20 @@
     }
 }
 
+.homeCardSection {
+    background: $secondary;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2.5rem;
+
+    img {
+        width: 90%;
+    }
+}
+
 @media (max-width: 768px) {
     .homeBanner {
 

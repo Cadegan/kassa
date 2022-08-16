@@ -17,7 +17,8 @@ function Home() {
         //     "Content-Type": "application/json",
         //     Accept: "application/json",
         //   },
-        // });
+        //  }
+        // );
         const response = await fetch(
           "https://fakestoreapi.com/products?_limit=10",
           {
@@ -83,7 +84,7 @@ function Home() {
             {`Erreur de chargement des données ${error}`}
           </div>
         )}
-        <div className="gridCardsContainer">
+        <div className="cardsContainer">
           {data &&
             data.map(({ id, title, image }) => (
               <Card id={id} key={id} title={title} image={image}></Card>

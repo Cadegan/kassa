@@ -1,1 +1,10 @@
-/*House Card*/
+/* Card House */
+
+.card {
+
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -192,7 +192,14 @@ a {
     font-size: 12px;
   }
 }
-/*House Card*/ /*Home*/
+/* Card House */
+.card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Home*/
 .homeSection {
   margin: 0px 6% 0px 6%;
 }
@@ -225,6 +232,19 @@ a {
   font-weight: 300;
   color: white;
   text-align: center;
+}
+
+.homeCardSection {
+  background: #F6F6F6;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2.5rem;
+}
+.cardsContainer img {
+  width: 90%;
 }
 
 @media (max-width: 768px) {
