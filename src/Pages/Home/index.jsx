@@ -9,26 +9,25 @@ function Home() {
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  //   v1
+  //   v2
   useEffect(() => {
     async function getData() {
       try {
-        // const response = await fetch("./data/logements.json", {
-        //   headers: {
-        //     "Content-Type": "application/json",
-        //     Accept: "application/json",
-        //   },
-        //  }
+        const response = await fetch("/logements.json", {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        });
+        // const response = await fetch(
+        //   "https://fakestoreapi.com/products?_limit=10",
+        //   {
+        //     headers: {
+        //       "Content-Type": "application/json",
+        //       Accept: "application/json",
+        //     },
+        //   }
         // );
-        const response = await fetch(
-          "https://fakestoreapi.com/products?_limit=10",
-          {
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-          }
-        );
         if (!response.ok) {
           throw new Error(` - Error status ${response.status}`);
         }
@@ -47,7 +46,7 @@ function Home() {
 
   /////
 
-  //   v2
+  //   Simplified version
   //   const getData = async () => {
   //     const response = await fetch("./data/logements.json", {
   //       headers: {
@@ -83,8 +82,8 @@ function Home() {
         )}
         <div className="cardsContainer">
           {data &&
-            data.map(({ id, title, image }) => (
-              <Card id={id} key={id} title={title} image={image}></Card>
+            data.map(({ id, title, cover }) => (
+              <Card id={id} key={id} title={title} cover={cover}></Card>
             ))}
         </div>
       </div>

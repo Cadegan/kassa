@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 function Card(props) {
-  const { id, title, image } = props;
+  const { id, title, cover } = props;
 
   return (
     <article className="card" key={id}>
-      <Link to={`/housing/${id}`} style={{ backgroundImage: `url(${image})` }}>
+      <Link to={`/housing/${id}`} style={{ backgroundImage: `url(${cover})` }}>
         {/* <img className="cardPicture" src={image} alt={title} /> */}
         <p className="cardTitle">{title}</p>
       </Link>
