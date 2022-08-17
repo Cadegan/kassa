@@ -1,5 +1,5 @@
 function Loader() {
-  return <div class="circleLoader"></div>;
+  return <div className="circleLoader"></div>;
 }
 
 export default Loader;

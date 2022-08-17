@@ -230,13 +230,19 @@ a {
   }
 }
 /* Card House */
+.card {
+  width: 100%;
+  height: 100%;
+}
 .card a {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.card img {
-  width: 90%;
+  height: 340px;
+  width: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*Home*/
@@ -276,6 +282,7 @@ a {
 
 .homeCardSection {
   background: #F6F6F6;
+  border-radius: 25px;
 }
 
 .cardsContainer {
@@ -283,6 +290,7 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2.5rem;
   place-items: center;
+  padding: 56px 50px 56px 50px;
 }
 
 @media (max-width: 768px) {

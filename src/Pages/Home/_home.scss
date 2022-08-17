@@ -36,6 +36,7 @@
 
 .homeCardSection {
     background: $secondary;
+    border-radius: 25px;
 }
 
 .cardsContainer {
@@ -43,6 +44,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2.5rem;
     place-items: center;
+    padding: 56px 50px 56px 50px;
 }
 
 @media (max-width: 768px) {
