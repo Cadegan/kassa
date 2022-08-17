@@ -28,7 +28,7 @@ a {
 .navbar a {
   font-size: 24px;
   font-weight: 500;
-  color: #FF6060;
+  color: #ff6060;
 }
 .navbar a:hover {
   text-decoration: underline;
@@ -80,7 +80,7 @@ a {
   text-align: center;
 }
 .errorMessage * {
-  color: #FF6060;
+  color: #ff6060;
 }
 .errorMessage h1 {
   font-size: 288px;
@@ -125,7 +125,7 @@ a {
 }
 
 .accordion-title {
-  background-color: #FF6060;
+  background-color: #ff6060;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -165,8 +165,8 @@ a {
   position: relative;
   top: -10px;
   z-index: -1;
-  background-color: #F6F6F6;
-  color: #FF6060;
+  background-color: #f6f6f6;
+  color: #ff6060;
   font-size: 24px;
   font-weight: 200;
   line-height: 34px;
@@ -210,9 +210,9 @@ a {
   margin: 8px;
   border-radius: 50%;
   border: 6px solid #fff;
-  border-color: #FF6060 transparent #FF6060 transparent;
+  border-color: #ff6060 transparent #ff6060 transparent;
   -webkit-animation: circleLoader 1.2s linear infinite;
-          animation: circleLoader 1.2s linear infinite;
+  animation: circleLoader 1.2s linear infinite;
 }
 
 @-webkit-keyframes circleLoader {
@@ -236,6 +236,7 @@ a {
 .card {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .card a {
   display: flex;
@@ -244,12 +245,31 @@ a {
   height: 340px;
   width: 100%;
   border-radius: 10px;
-  background-size: cover;
+  background-size: auto 100%;
+  background-position: center;
   background-repeat: no-repeat;
+  transition: all 0.2s ease-in;
 }
+.card a:hover {
+  background-size: auto 107%;
+  transition: all 0.3s ease-out;
+}
+
+.card a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  border-radius: 10px;
+}
+
 .card a * {
   margin: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
+  z-index: 1;
 }
 
 /*Home*/
@@ -270,9 +290,9 @@ a {
   width: 100%;
   border-radius: 25px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: 50% 45%;
-     object-position: 50% 45%;
+  object-position: 50% 45%;
   filter: brightness(70%);
 }
 .homeBanner p {
@@ -288,7 +308,7 @@ a {
 }
 
 .homeCardSection {
-  background: #F6F6F6;
+  background: #f6f6f6;
   border-radius: 25px;
   margin-bottom: 31px;
 }
@@ -331,9 +351,9 @@ a {
   width: 100%;
   border-radius: 25px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: 50% 45%;
-     object-position: 50% 45%;
+  object-position: 50% 45%;
   filter: brightness(70%);
 }
 
@@ -342,4 +362,4 @@ a {
     min-width: 223px;
     border-radius: 10px;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

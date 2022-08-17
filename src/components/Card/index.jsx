@@ -6,7 +6,6 @@ function Card(props) {
   return (
     <article className="card" key={id}>
       <Link to={`/housing/${id}`} style={{ backgroundImage: `url(${cover})` }}>
-        {/* <img className="cardPicture" src={image} alt={title} /> */}
         <p className="cardTitle">{title}</p>
       </Link>
     </article>
