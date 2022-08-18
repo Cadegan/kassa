@@ -1,9 +1,9 @@
 /*Global*/
 
-body {
-    display: flex;
-    justify-content: center;
-}
+// body {
+//     display: flex;
+//     justify-content: center;
+// }
 
 * {
     font-family: "Montserrat", sans-serif;
@@ -11,16 +11,6 @@ body {
     padding: 0;
 }
 
-// body {
-//     margin: 40px 6% 0px 6%;
-// }
-
 a {
     text-decoration: none;
-}
-
-@media (max-width: 768px) {
-    body {
-        display: block;
-    }
 }

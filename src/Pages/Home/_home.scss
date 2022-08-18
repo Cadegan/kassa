@@ -57,6 +57,7 @@
 
 @media (max-width: 768px) {
     .homeBanner {
+        margin-bottom: 0px;
 
         img {
             height: 111px;
@@ -81,5 +82,7 @@
 
     .cardsContainer {
         grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1.5rem;
+        padding: 22px 0px 22px 0px;
     }
 }
