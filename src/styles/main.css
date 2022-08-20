@@ -460,4 +460,20 @@ a {
 .host * {
   color: #FF6060;
   text-align: right;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 4%;
+}
+.content .accordion-item {
+  width: 100%;
+}
+.content .description,
+.content .equipments {
+  width: 46%;
+}
+.content .accordion-content {
+  list-style: none;
 }/*# sourceMappingURL=main.css.map */

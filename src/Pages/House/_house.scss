@@ -52,3 +52,22 @@
         text-align: right;
     }
 }
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
+
+    .accordion-item {
+        width: 100%;
+    }
+
+    .description,
+    .equipments {
+        width: 46%;
+    }
+
+    .accordion-content {
+        list-style: none;
+    }
+}

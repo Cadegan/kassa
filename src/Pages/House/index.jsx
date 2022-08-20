@@ -30,7 +30,7 @@ function House() {
   return detail ? (
     <div className="logement">
       <div className="carrousel">Carrousel</div>
-      <div className="primaryInformations">
+      <section className="primaryInformations">
         <div className="houseTitles">
           <h1>{detail.title}</h1>
           <h2>{detail.location}</h2>
@@ -41,11 +41,12 @@ function House() {
             <img src={detail.host.picture} alt={detail.host.name} />
           </div>
         </div>
-      </div>
-
-      <section className="content">
+      </section>
+      <section className="secondaryInformations">
         <Tag tags={detail.tags}></Tag>
         <div className="rating">{detail.rating}</div>
+      </section>
+      <section className="content">
         <div className="description">
           <Accordion
             title="Description"
