@@ -18,8 +18,8 @@ function House() {
       })
         .then((response) => response.json())
         .catch((err) => console.log(err))
-        .then((myJson) => {
-          let appartment = myJson.find((app) => app.id === id);
+        .then((data) => {
+          let appartment = data.find((e) => e.id === id);
           appartment ? setDetails(appartment) : navigate("/*");
         });
     };
