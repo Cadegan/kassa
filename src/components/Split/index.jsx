@@ -1,4 +1,4 @@
-//Split function
+/*Split function*/
 
 const SplitText = ({ textTosplit }) => {
   return (
@@ -11,3 +11,15 @@ const SplitText = ({ textTosplit }) => {
 };
 
 export default SplitText;
+
+/* Version alternative */
+// const SplitText = ({ textTosplit }) => {
+//   return (
+//     <div className="hostName">
+//       <p>{textTosplit.split(" ")[0]}</p>
+//       <p>{textTosplit.split(" ")[1]}</p>
+//     </div>
+//   );
+// };
+
+// export default SplitText;

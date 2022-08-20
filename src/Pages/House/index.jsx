@@ -19,8 +19,8 @@ function House() {
       })
         .then((response) => response.json())
         .catch((err) => console.log(err))
-        .then((data) => {
-          let appartment = data.find((e) => e.id === id);
+        .then((jsonResponse) => {
+          let appartment = jsonResponse.find((e) => e.id === id);
           appartment ? setDetails(appartment) : navigate("/*");
         });
     };
@@ -30,17 +30,22 @@ function House() {
   return detail ? (
     <div className="logement">
       <div className="carrousel">Carrousel</div>
-      <div className="titles">
-        <h1>{detail.title}</h1>
-        <h2>{detail.location}</h2>
+      <div className="primaryInformations">
+        <div className="houseTitles">
+          <h1>{detail.title}</h1>
+          <h2>{detail.location}</h2>
+        </div>
+        <div className="host">
+          <SplitText textTosplit={detail.host.name}></SplitText>
+          <div className="hostPicture">
+            <img src={detail.host.picture} alt={detail.host.name} />
+          </div>
+        </div>
       </div>
-      <div className="host">
-        <SplitText textTosplit={detail.host.name}></SplitText>
-        <img src={detail.host.picture} alt={detail.host.name} />
-        <div className="rating">{detail.rating}</div>
-      </div>
+
       <section className="content">
         <Tag tags={detail.tags}></Tag>
+        <div className="rating">{detail.rating}</div>
         <div className="description">
           <Accordion
             title="Description"
