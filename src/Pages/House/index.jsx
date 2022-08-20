@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Accordion from "../../components/Accordion/index";
+import Tag from "../../components/tag/index";
 
 function House() {
   const { id } = useParams();
@@ -39,14 +40,7 @@ function House() {
         <div className="rating">{detail.rating}</div>
       </div>
       <section className="content">
-        {/* <div className="tags">{detail.tags}</div> */}
-        <div className="tagsGroup">
-          {detail.tags.map((tag, key) => (
-            <div className="tag" key={key}>
-              {tag}
-            </div>
-          ))}
-        </div>
+        <Tag tags={detail.tags}></Tag>
         <div className="description">
           <Accordion
             title="Description"
