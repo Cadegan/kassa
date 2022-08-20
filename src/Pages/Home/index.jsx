@@ -19,15 +19,6 @@ function Home() {
             Accept: "application/json",
           },
         });
-        // const response = await fetch(
-        //   "https://fakestoreapi.com/products?_limit=10",
-        //   {
-        //     headers: {
-        //       "Content-Type": "application/json",
-        //       Accept: "application/json",
-        //     },
-        //   }
-        // );
         if (!response.ok) {
           throw new Error(` - Error status ${response.status}`);
         }

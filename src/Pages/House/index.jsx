@@ -1,96 +1,49 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 function House() {
-  const { id } = useParams;
-  const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { id } = useParams();
+  const [detail, setDetails] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    async function getData() {
-      try {
-        const response = await fetch("/logements.json", {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
+    const getData = async () => {
+      await fetch("/logements.json", {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .catch((err) => console.log(err))
+        .then((myJson) => {
+          let appartment = myJson.find((app) => app.id === id);
+          appartment ? setDetails(appartment) : navigate("/*");
         });
-
-        if (!response.ok) {
-          throw new Error(` - Error status ${response.status}`);
-        }
-        let houseData = await response.json();
-        let houseSelected = houseData.find((e) => e.id === id);
-        if (houseSelected) {
-          setData(houseSelected);
-          setError(null);
-        }
-      } catch (err) {
-        setError(err.message);
-        setData(null);
-      } finally {
-        setLoading(false);
-      }
-    }
+    };
     getData();
-  }, [data, id]);
+  }, [detail, id, navigate]);
+
+  return detail ? (
+    <div className="logement">
+      <div className="carrousel">Carrousel</div>
+      <div className="titles">
+        <h1>{detail.title}</h1>
+        <h2>{detail.location}</h2>
+      </div>
+
+      <div className="host">
+        <p className="name">{detail.host.name}</p>
+        <img src={detail.host.picture} alt={detail.host.name} />
+        <div className="rating">{detail.rating}</div>
+      </div>
+      <section className="content">
+        <div className="tags">{detail.tags}</div>
+        <div className="description">{detail.description}</div>
+        <div className="equipments">{detail.equipments}</div>
+      </section>
+    </div>
+  ) : null;
 }
 
-// export default House;
-
-// function Home() {
-//   const [data, setData] = useState(null);
-//   const [isLoading, setLoading] = useState(true);
-//   const [error, setError] = useState(null);
-
-//   //   v2
-//   useEffect(() => {
-//     async function getData() {
-//       try {
-//         const response = await fetch("/logements.json", {
-//           headers: {
-//             "Content-Type": "application/json",
-//             Accept: "application/json",
-//           },
-//         });
-
-//         if (!response.ok) {
-//           throw new Error(` - Error status ${response.status}`);
-//         }
-//         let actualData = await response.json();
-//         setData(actualData);
-//         setError(null);
-//       } catch (err) {
-//         setError(err.message);
-//         setData(null);
-//       } finally {
-//         setLoading(false);
-//       }
-//     }
-//     getData();
-//   }, []);
-
-//   return (
-//     <section className="homeSection">
-//       <div className="homeBanner">
-//         <img src={imgBanner} alt="Bannière entête"></img>
-//         <p>Chez vous, partout et ailleurs</p>
-//       </div>
-//       <div className="homeCardSection">
-//         {isLoading && <Loader />}
-//         {error && (
-//           <div className="errorMessage">
-//             {`Erreur de chargement des données ${error}`}
-//           </div>
-//         )}
-//         <div className="cardsContainer">
-//           {data &&
-//             data.map(({ id, title, cover }) => (
-//               <Card id={id} key={id} title={title} cover={cover}></Card>
-//             ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
+export default House;

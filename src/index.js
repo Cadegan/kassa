@@ -5,6 +5,7 @@ import "./styles/main.css";
 import Header from "./components/Header/index";
 import Footer from "./components/Footer/index";
 import Home from "./pages/Home/index";
+import House from "./pages/House/index";
 import About from "./pages/About/index";
 import Error from "./components/Error/index";
 import reportWebVitals from "./reportWebVitals";
@@ -16,6 +17,7 @@ root.render(
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/housing/:id" element={<House />} />
         <Route exact path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>
