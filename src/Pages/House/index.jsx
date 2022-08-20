@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Accordion from "../../components/Accordion/index";
 
 function House() {
   const { id } = useParams();
@@ -39,8 +40,23 @@ function House() {
       </div>
       <section className="content">
         <div className="tags">{detail.tags}</div>
-        <div className="description">{detail.description}</div>
-        <div className="equipments">{detail.equipments}</div>
+        <div className="description">
+          <Accordion
+            title="Description"
+            content={detail.description}
+          ></Accordion>
+        </div>
+        <div className="equipments">
+          <Accordion
+            title="Équipments"
+            content={
+              detail.equipments &&
+              detail.equipments.map((content, index) => (
+                <li key={index}>{content}</li>
+              ))
+            }
+          ></Accordion>
+        </div>
       </section>
     </div>
   ) : null;
