@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Accordion from "../../components/Accordion/index";
-import Tag from "../../components/tag/index";
+import Tag from "../../components/Tag/index";
+import SplitText from "../../components/Split";
 
 function House() {
   const { id } = useParams();
@@ -33,9 +34,8 @@ function House() {
         <h1>{detail.title}</h1>
         <h2>{detail.location}</h2>
       </div>
-
       <div className="host">
-        <p className="name">{detail.host.name}</p>
+        <SplitText textTosplit={detail.host.name}></SplitText>
         <img src={detail.host.picture} alt={detail.host.name} />
         <div className="rating">{detail.rating}</div>
       </div>
