@@ -39,7 +39,14 @@ function House() {
         <div className="rating">{detail.rating}</div>
       </div>
       <section className="content">
-        <div className="tags">{detail.tags}</div>
+        {/* <div className="tags">{detail.tags}</div> */}
+        <div className="tagsGroup">
+          {detail.tags.map((tag, key) => (
+            <div className="tag" key={key}>
+              {tag}
+            </div>
+          ))}
+        </div>
         <div className="description">
           <Accordion
             title="Description"

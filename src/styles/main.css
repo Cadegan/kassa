@@ -390,4 +390,13 @@ a {
     min-width: 223px;
     border-radius: 10px;
   }
+}
+h1 {
+  font-size: 36px;
+  color: #FF6060;
+}
+
+h2 {
+  font-size: 18px;
+  color: #FF6060;
 }/*# sourceMappingURL=main.css.map */
