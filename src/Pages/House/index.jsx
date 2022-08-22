@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Accordion from "../../components/Accordion/index";
 import Tag from "../../components/Tag/index";
+import Rating from "../../components/Rate/index";
 import SplitText from "../../components/Split";
 
 function House() {
@@ -44,7 +45,7 @@ function House() {
       </section>
       <section className="secondaryInformations">
         <Tag tags={detail.tags}></Tag>
-        <div className="rating">{detail.rating}</div>
+        <Rating stars={detail.rating}></Rating>
       </section>
       <section className="content">
         <div className="description">
