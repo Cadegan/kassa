@@ -164,7 +164,7 @@ a {
 }
 
 .accordion-content {
-  padding: 37px 15px 19px 15px;
+  padding: 37px 15px 27px 15px;
   position: relative;
   top: -10px;
   z-index: -1;
@@ -189,7 +189,7 @@ a {
     font-weight: 500;
   }
   .accordion-content {
-    padding: 23px 15px 52px 15px;
+    padding: 23px 15px 13px 15px;
   }
   .accordion-content * {
     font-size: 12px;
