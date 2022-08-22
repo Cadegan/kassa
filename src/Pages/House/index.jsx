@@ -36,7 +36,7 @@ function House() {
           <h2>{detail.location}</h2>
         </div>
         <div className="host">
-          <SplitText textTosplit={detail.host.name}></SplitText>
+          <SplitText textToSplit={detail.host.name}></SplitText>
           <div className="hostPicture">
             <img src={detail.host.picture} alt={detail.host.name} />
           </div>

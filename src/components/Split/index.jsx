@@ -1,9 +1,9 @@
 /*Split function*/
 
-const SplitText = ({ textTosplit }) => {
+const SplitText = ({ textToSplit }) => {
   return (
     <div className="hostName">
-      {textTosplit.split(" ").map((item, index) => (
+      {textToSplit.split(" ").map((item, index) => (
         <p key={index}>{item}</p>
       ))}
     </div>
@@ -13,11 +13,11 @@ const SplitText = ({ textTosplit }) => {
 export default SplitText;
 
 /* Version alternative */
-// const SplitText = ({ textTosplit }) => {
+// const SplitText = ({ textToSplit }) => {
 //   return (
 //     <div className="hostName">
-//       <p>{textTosplit.split(" ")[0]}</p>
-//       <p>{textTosplit.split(" ")[1]}</p>
+//       <p>{textToSplit.split(" ")[0]}</p>
+//       <p>{textToSplit.split(" ")[1]}</p>
 //     </div>
 //   );
 // };
