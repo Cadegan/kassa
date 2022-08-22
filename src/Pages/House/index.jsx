@@ -31,21 +31,23 @@ function House() {
   return detail ? (
     <div className="logement">
       <div className="carrousel">Carrousel</div>
-      <section className="primaryInformations">
-        <div className="houseTitles">
-          <h1>{detail.title}</h1>
-          <h2>{detail.location}</h2>
-        </div>
-        <div className="host">
-          <SplitText textToSplit={detail.host.name}></SplitText>
-          <div className="hostPicture">
-            <img src={detail.host.picture} alt={detail.host.name} />
+      <section className="globalInformations">
+        <div className="primaryInformations">
+          <div className="houseTitles">
+            <h1 className="title">{detail.title}</h1>
+            <h2 className="location">{detail.location}</h2>
           </div>
+          <Tag tags={detail.tags}></Tag>
         </div>
-      </section>
-      <section className="secondaryInformations">
-        <Tag tags={detail.tags}></Tag>
-        <Rating stars={detail.rating}></Rating>
+        <div className="secondaryInformations">
+          <div className="host">
+            <SplitText textToSplit={detail.host.name}></SplitText>
+            <div className="hostPicture">
+              <img src={detail.host.picture} alt={detail.host.name} />
+            </div>
+          </div>
+          <Rating stars={detail.rating}></Rating>
+        </div>
       </section>
       <section className="content">
         <div className="description">

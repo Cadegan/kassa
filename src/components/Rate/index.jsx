@@ -17,7 +17,15 @@ const RatingScale = ({ stars }) => {
   return (
     <div className="rating">
       {starsArray.map((i) =>
-        i <= stars ? <FilledStarResult key={i} /> : <BlankStarResult key={i} />
+        i <= stars ? (
+          <span key={i}>
+            <FilledStarResult />
+          </span>
+        ) : (
+          <span key={i}>
+            <BlankStarResult />
+          </span>
+        )
       )}
     </div>
   );

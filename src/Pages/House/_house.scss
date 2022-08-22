@@ -1,5 +1,23 @@
 /* House */
 
+.globalInformations {
+    display: flex;
+    justify-content: space-between;
+}
+
+.primaryInformations {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.secondaryInformations {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+
 .houseTitles {
     margin-right: 20px;
 
@@ -19,12 +37,6 @@
 
 .logement {
     margin: 0px 6% 0px 6%;
-}
-
-.primaryInformations {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 
 .host {
@@ -70,12 +82,6 @@
     .accordion-content {
         list-style: none;
     }
-}
-
-.secondaryInformations {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 @media (max-width: 768px) {
