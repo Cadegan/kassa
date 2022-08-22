@@ -305,10 +305,13 @@ a {
 }
 
 @media (max-width: 768px) {
+  .tagsGroup {
+    margin: 10px 0px 16px 0px;
+  }
   .tagsGroup .tag {
     min-width: 84px;
     font-size: 10px;
-    padding: 0px 15px 0px 15px;
+    padding: 0px 10px 0px 10px;
   }
 }
 /* Rate */
@@ -324,6 +327,7 @@ a {
 .filledStar {
     width: 18px;
     height: 18px;
+    margin-top: 0px;
   }
 }
 /*Home*/
@@ -479,6 +483,10 @@ a {
   display: flex;
   align-items: center;
 }
+.host * {
+  font-size: 18px;
+  font-weight: 500;
+}
 .host .hostName {
   margin-right: 10px;
 }
@@ -515,10 +523,38 @@ a {
 }
 
 @media (max-width: 768px) {
+  .houseTitles {
+    margin-right: 0px;
+  }
   .houseTitles h1 {
     font-size: 18px;
   }
   .houseTitles h2 {
     font-size: 14px;
+    margin-top: 5px;
+  }
+  .host * {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .host .hostPicture {
+    width: 32px;
+    height: 32px;
+  }
+  .globalInformations {
+    flex-direction: column;
+  }
+  .secondaryInformations {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .content .description,
+.content .equipments {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

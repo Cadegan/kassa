@@ -45,6 +45,11 @@
     display: flex;
     align-items: center;
 
+    * {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
     .hostName {
         margin-right: 10px;
     }
@@ -89,14 +94,47 @@
 @media (max-width: 768px) {
 
     .houseTitles {
+        margin-right: 0px;
+
         h1 {
             font-size: 18px;
         }
 
         h2 {
             font-size: 14px;
+            margin-top: 5px;
         }
     }
 
+    .host {
+        * {
+            font-size: 12px;
+            font-weight: 500;
+        }
 
+        .hostPicture {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .globalInformations {
+        flex-direction: column;
+    }
+
+    .secondaryInformations {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .content {
+        flex-direction: column;
+
+        .description,
+        .equipments {
+            width: 100%;
+        }
+    }
 }
