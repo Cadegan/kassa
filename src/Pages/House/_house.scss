@@ -71,3 +71,24 @@
         list-style: none;
     }
 }
+
+.secondaryInformations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+
+    .houseTitles {
+        h1 {
+            font-size: 18px;
+        }
+
+        h2 {
+            font-size: 14px;
+        }
+    }
+
+
+}

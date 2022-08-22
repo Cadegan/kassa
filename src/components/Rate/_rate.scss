@@ -1,0 +1,16 @@
+/* Rate */
+
+.blankStar,
+.filledStar {
+    width: 36px;
+    height: 36px;
+}
+
+@media (max-width: 768px) {
+
+    .blankStar,
+    .filledStar {
+        width: 18px;
+        height: 18px;
+    }
+}
