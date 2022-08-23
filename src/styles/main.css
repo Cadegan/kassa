@@ -283,17 +283,53 @@ a {
 }
 .caroussel {
   display: flex;
-  width: auto;
+  width: 100%;
   height: 415px;
+  position: relative;
+}
+
+.currentSlide {
+  width: 100%;
+  height: 100%;
+}
+
+.slidePosition {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 90%;
+  bottom: 6%;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+}
+
+.carousselNavigation {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  width: 100%;
+  justify-content: space-between;
+}
+.carousselNavigation .prevBoutton {
+  transform: rotate(270deg);
+}
+.carousselNavigation .nextBoutton {
+  transform: rotate(90deg);
 }
 
 .prevBoutton,
 .nextBoutton {
-  background-color: aquamarine;
   margin: 0px;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 47px;
   cursor: pointer;
+}
+.prevBoutton img,
+.nextBoutton img {
+  width: 100%;
 }
 
 /* Tag */

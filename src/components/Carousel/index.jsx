@@ -16,7 +16,11 @@ const Carousel = ({ slides }) => {
   /* v2 */
   return (
     <div className="caroussel">
-      <img src={slides[current]} alt={slides[current]}></img>
+      <div
+        className="currentSlide"
+        style={{ backgroundImage: `url(${slides[current]})` }}
+      ></div>
+      {/* <img src={slides[current]} alt={slides[current]}></img> */}
       <span className="slidePosition">
         {current + 1}/{length}
       </span>
