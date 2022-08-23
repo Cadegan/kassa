@@ -19,6 +19,10 @@
 
     img {
         height: 60px;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 }
 
@@ -28,6 +32,10 @@
     align-items: center;
     height: 100%;
     cursor: pointer;
+
+    img {
+        z-index: 1;
+    }
 }
 
 .prevBoutton {
@@ -35,12 +43,56 @@
     img {
         transform: rotate(270deg)
     }
+
+    &:hover {
+        &::after {
+            opacity: 0.2;
+            transition: opacity 300ms ease;
+        }
+
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 96px;
+        height: 100%;
+        background:
+            rgba(0, 0, 0);
+        opacity: 0;
+        border-radius: 25px 0px 0px 25px;
+        transition: opacity 300ms ease;
+    }
+
 }
 
 .nextBoutton {
 
     img {
         transform: rotate(90deg)
+    }
+
+    &:hover {
+        &::after {
+            opacity: 0.2;
+            transition: opacity 300ms ease;
+        }
+
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 96px;
+        height: 100%;
+        background: rgba(0, 0, 0);
+        opacity: 0;
+        border-radius: 0px 25px 25px 0px;
+        transition: opacity 300ms ease;
     }
 }
 
