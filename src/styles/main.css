@@ -281,6 +281,11 @@ a {
     background-size: cover;
   }
 }
+.caroussel img {
+  width: 400px;
+  height: 200px;
+}
+
 /* Tag */
 .tagsGroup {
   display: flex;
