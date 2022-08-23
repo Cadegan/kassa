@@ -19,8 +19,12 @@ const Carousel = ({ slides }) => {
       <span className="slidePosition">
         {current + 1}/{length}
       </span>
-      <button onClick={prevSlide}>Prev</button>
-      <button onClick={nextSlide}>Next</button>
+      {length > 1 ? (
+        <div>
+          <button onClick={prevSlide}>Prev</button>
+          <button onClick={nextSlide}>Next</button>
+        </div>
+      ) : null}
     </div>
   );
 
