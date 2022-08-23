@@ -15,25 +15,26 @@ const Carousel = ({ slides }) => {
 
   /* v2 */
   return (
-    <div className="caroussel">
-      <div
-        className="currentSlide"
-        style={{ backgroundImage: `url(${slides[current]})` }}
-      ></div>
+    <div
+      className="caroussel"
+      style={{ backgroundImage: `url(${slides[current]})` }}
+    >
       {/* <img src={slides[current]} alt={slides[current]}></img> */}
-      <span className="slidePosition">
-        {current + 1}/{length}
-      </span>
-      {length > 1 ? (
-        <div className="carousselNavigation">
+      <div className="carousselNavigation">
+        {length > 1 ? (
           <div className="prevBoutton" onClick={prevSlide}>
             <img src={arrow} alt="arrow" className="prevArrow"></img>
           </div>
+        ) : null}
+        {length > 1 ? (
           <div className="nextBoutton" onClick={nextSlide}>
             <img src={arrow} alt="arrow" className="nextArrow"></img>
           </div>
-        </div>
-      ) : null}
+        ) : null}
+      </div>
+      <span className="slidePosition">
+        {current + 1}/{length}
+      </span>
     </div>
   );
 };
