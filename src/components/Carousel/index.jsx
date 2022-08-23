@@ -2,14 +2,14 @@ import { useState } from "react";
 
 const Carousel = ({ slides }) => {
   const [current, setCurrent] = useState(0);
-  const lenght = slides.lenght;
+  const length = slides.length;
 
   const nextSlide = () => {
-    setCurrent(current === lenght - 1 ? 0 : current + 1);
+    setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
   const prevSlide = () => {
-    setCurrent(current === 0 ? lenght - 1 : current - 1);
+    setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
   /* v2 */
@@ -17,7 +17,7 @@ const Carousel = ({ slides }) => {
     <div className="caroussel">
       <img src={slides[current]} alt={slides[current]}></img>
       <span className="slidePosition">
-        {current + 1}/{lenght}
+        {current + 1}/{length}
       </span>
       <button onClick={prevSlide}>Prev</button>
       <button onClick={nextSlide}>Next</button>
