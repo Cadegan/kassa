@@ -12,19 +12,32 @@ const Carousel = ({ slides }) => {
     setCurrent(current === 0 ? lenght - 1 : current - 1);
   };
 
+  /* v2 */
   return (
     <div className="caroussel">
-      {slides.map((slide, index) => {
-        return (
-          <div className="currentSlide" key={index}>
-            {index === current && <img src={slide} alt={slide} />}
-            <button onClick={prevSlide}>Prev</button>
-            <button onClick={nextSlide}>Next</button>
-          </div>
-        );
-      })}
+      <img src={slides[current]} alt={slides[current]}></img>
+      <span className="slidePosition">
+        {current + 1}/{lenght}
+      </span>
+      <button onClick={prevSlide}>Prev</button>
+      <button onClick={nextSlide}>Next</button>
     </div>
   );
+
+  /* v1 */
+  //   return (
+  //     <div className="caroussel">
+  //       {slides.map((slide, index) => {
+  //         return (
+  //           <div className="currentSlide" key={index}>
+  //             {index === current && <img src={slide} alt={slide} />}
+  //           </div>
+  //         );
+  //       })}
+  //       <button onClick={prevSlide}>Prev</button>
+  //       <button onClick={nextSlide}>Next</button>
+  //     </div>
+  //   );
 };
 
 export default Carousel;
