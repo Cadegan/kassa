@@ -31,7 +31,7 @@ function House() {
 
   return detail ? (
     <div className="logement">
-      <div className="carrousel">Carrousel</div>
+      <Carousel slides={detail.pictures}></Carousel>
       <section className="globalInformations">
         <div className="primaryInformations">
           <div className="houseTitles">

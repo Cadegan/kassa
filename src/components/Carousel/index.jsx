@@ -17,7 +17,7 @@ const Carousel = ({ slides }) => {
       {slides.map((slide, index) => {
         return (
           <div className="currentSlide" key={index}>
-            {index === current && <img src={slide.pictures} alt={slide.alt} />}
+            {index === current && <img src={slide} alt={slide} />}
             <button onClick={prevSlide}>Prev</button>
             <button onClick={nextSlide}>Next</button>
           </div>
