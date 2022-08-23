@@ -1,3 +1,34 @@
+import { useState } from "react";
+
+const Carousel = ({ slides }) => {
+  const [current, setCurrent] = useState(0);
+  const lenght = slides.lenght;
+
+  const nextSlide = () => {
+    setCurrent(current === lenght - 1 ? 0 : current + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? lenght - 1 : current - 1);
+  };
+
+  return (
+    <div className="caroussel">
+      {slides.map((slide, index) => {
+        return (
+          <div className="currentSlide" key={index}>
+            {index === current && <img src={slide.pictures} alt={slide.alt} />}
+            <button onClick={prevSlide}>Prev</button>
+            <button onClick={nextSlide}>Next</button>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default Carousel;
+
 /*Exemple */
 
 // const { Component } = React;

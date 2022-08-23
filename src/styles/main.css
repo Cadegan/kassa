@@ -327,7 +327,7 @@ a {
 .filledStar {
     width: 18px;
     height: 18px;
-    margin-top: 0px;
+    margin-top: 4px;
   }
 }
 /*Home*/
@@ -455,7 +455,7 @@ a {
 
 .secondaryInformations {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   flex-direction: column;
   justify-content: flex-start;
   min-width: 180px;
@@ -523,6 +523,9 @@ a {
 }
 
 @media (max-width: 768px) {
+  .logement {
+    margin: 0px 20px 0px 20px;
+  }
   .houseTitles {
     margin-right: 0px;
   }

@@ -4,6 +4,7 @@ import Accordion from "../../components/Accordion/index";
 import Tag from "../../components/Tag/index";
 import Rating from "../../components/Rate/index";
 import SplitText from "../../components/Split";
+import Carousel from "../../components/Carousel";
 
 function House() {
   const { id } = useParams();

@@ -3,11 +3,11 @@ import blankStar from "../../assets/star-blank.svg";
 import filledStar from "../../assets/star-filled.svg";
 // import "./Logement.sass";
 
-const BlankStarResult = () => (
+const BlankStar = () => (
   <img src={blankStar} alt="blankStar" className="blankStar" />
 );
 
-const FilledStarResult = () => (
+const FilledStar = () => (
   <img src={filledStar} alt="filledStar" className="filledStar" />
 );
 
@@ -19,11 +19,11 @@ const RatingScale = ({ stars }) => {
       {starsArray.map((i) =>
         i <= stars ? (
           <span key={i}>
-            <FilledStarResult />
+            <FilledStar />
           </span>
         ) : (
           <span key={i}>
-            <BlankStarResult />
+            <BlankStar />
           </span>
         )
       )}
