@@ -281,9 +281,19 @@ a {
     background-size: cover;
   }
 }
-.caroussel img {
-  width: 400px;
-  height: 200px;
+.caroussel {
+  display: flex;
+  width: auto;
+  height: 415px;
+}
+
+.prevBoutton,
+.nextBoutton {
+  background-color: aquamarine;
+  margin: 0px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
 
 /* Tag */
