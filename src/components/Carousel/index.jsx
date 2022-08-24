@@ -18,6 +18,7 @@ const Carousel = ({ slides }) => {
     <div
       className="caroussel"
       style={{ backgroundImage: `url(${slides[current]})` }}
+      src={slides[current]}
     >
       {/* <img src={slides[current]} alt={slides[current]}></img> */}
       <div className="carousselNavigation">

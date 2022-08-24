@@ -60,8 +60,11 @@ function Home() {
 
   return (
     <section className="homeSection">
-      <div className="homeBanner">
-        <img src={imgBanner} alt="Bannière entête"></img>
+      <div
+        className="homeBanner"
+        src={imgBanner}
+        style={{ backgroundImage: `url(${imgBanner})` }}
+      >
         <p>Chez vous, partout et ailleurs</p>
       </div>
       <div className="homeCardSection">

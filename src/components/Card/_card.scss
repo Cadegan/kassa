@@ -50,6 +50,7 @@
 @media (max-width: 768px) {
     .card a {
         background-size: cover;
+        height: 255px;
         transition: none;
 
         &:hover {
