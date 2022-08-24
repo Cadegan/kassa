@@ -125,6 +125,7 @@
 
     .globalInformations {
         flex-direction: column;
+        margin-top: 15px;
     }
 
     .secondaryInformations {
@@ -141,5 +142,11 @@
         .equipments {
             width: 100%;
         }
+
+        .description {
+    .accordion-item {
+        margin-bottom: 20px;
+    }
+}
     }
 }
