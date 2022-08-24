@@ -5,6 +5,7 @@ import Tag from "../../components/Tag/index";
 import Rating from "../../components/Rate/index";
 import SplitText from "../../components/Split";
 import Carousel from "../../components/Carousel";
+import Error from "../../components/Error/index";
 
 function House() {
   const [data, setData] = useState(null);
@@ -75,7 +76,9 @@ function House() {
           </div>
         </section>
       </div>
-    ) : null;
+    ) : (
+      <Error />
+    );
   }
 }
 

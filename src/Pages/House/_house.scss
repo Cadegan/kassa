@@ -79,6 +79,10 @@
     justify-content: space-between;
     gap: 4%;
 
+    .accordion-title {
+        font-size: 18px;
+    }
+
     .accordion-item {
         width: 100%;
         font-weight: 300;
@@ -91,6 +95,8 @@
 
     .accordion-content {
         list-style: none;
+        font-size: 18px;
+        line-height: 26px;
     }
 }
 
@@ -143,6 +149,15 @@
         .description,
         .equipments {
             width: 100%;
+        }
+
+        .accordion-title {
+            font-size: 13px;
+        }
+
+        .accordion-content {
+            font-size: 12px;
+            line-height: 17px;
         }
 
         .description {

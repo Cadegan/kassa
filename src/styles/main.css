@@ -134,6 +134,8 @@ a {
   align-items: center;
   border-radius: 5px;
   padding: 10px 15px 9px 15px;
+  font-size: 24px;
+  font-weight: 400;
   cursor: pointer;
 }
 .accordion-title img {
@@ -145,8 +147,6 @@ a {
 }
 .accordion-title * {
   color: white;
-  font-size: 24px;
-  font-weight: 400;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -171,7 +171,7 @@ a {
   background-color: #F6F6F6;
   color: #FF6060;
   font-size: 24px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 34px;
 }
 
@@ -179,20 +179,13 @@ a {
   .accordion-item {
     width: 100%;
   }
-  .accordion-item * {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 17px;
-  }
-  .accordion-title * {
+  .accordion-title {
     font-size: 13px;
-    font-weight: 500;
   }
   .accordion-content {
     padding: 23px 15px 13px 15px;
-  }
-  .accordion-content * {
     font-size: 12px;
+    line-height: 17px;
   }
 }
 /* CircleLoader */
@@ -629,6 +622,9 @@ a {
   justify-content: space-between;
   gap: 4%;
 }
+.content .accordion-title {
+  font-size: 18px;
+}
 .content .accordion-item {
   width: 100%;
   font-weight: 300;
@@ -639,6 +635,8 @@ a {
 }
 .content .accordion-content {
   list-style: none;
+  font-size: 18px;
+  line-height: 26px;
 }
 
 @media (max-width: 768px) {
@@ -679,6 +677,13 @@ a {
   .content .description,
 .content .equipments {
     width: 100%;
+  }
+  .content .accordion-title {
+    font-size: 13px;
+  }
+  .content .accordion-content {
+    font-size: 12px;
+    line-height: 17px;
   }
   .content .description .accordion-item {
     margin-bottom: 20px;
