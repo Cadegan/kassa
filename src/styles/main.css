@@ -27,7 +27,7 @@ a {
 }
 .navbar a {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 300;
   color: #FF6060;
 }
 .navbar a:hover {
@@ -267,9 +267,12 @@ a {
   border-radius: 10px;
 }
 .card a * {
-  margin: 20px;
+  margin: 20px 20px 15px 20px;
   color: #FFFFFF;
   z-index: 1;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 @media (max-width: 768px) {
@@ -301,7 +304,7 @@ a {
   justify-content: space-between;
 }
 .carousselNavigation img {
-  height: 60px;
+  height: 47px;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -332,7 +335,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 96px;
+  width: 75.2px;
   height: 100%;
   background: rgb(0, 0, 0);
   opacity: 0;
@@ -352,7 +355,7 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  width: 96px;
+  width: 75.2px;
   height: 100%;
   background: rgb(0, 0, 0);
   opacity: 0;
@@ -378,6 +381,7 @@ a {
 @media (max-width: 768px) {
   .caroussel {
     height: 255px;
+    border-radius: 10px;
   }
   .carousselNavigation img {
     height: 20px;
@@ -579,13 +583,14 @@ a {
 }
 .houseTitles h1 {
   font-size: 36px;
-  font-weight: 500;
+  font-weight: 300;
   color: #FF6060;
 }
 .houseTitles h2 {
+  margin-top: 12px;
   font-size: 18px;
   color: #FF6060;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .logement {
@@ -598,7 +603,7 @@ a {
 }
 .host * {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 300;
 }
 .host .hostName {
   margin-right: 10px;
@@ -626,6 +631,7 @@ a {
 }
 .content .accordion-item {
   width: 100%;
+  font-weight: 300;
 }
 .content .description,
 .content .equipments {
@@ -644,6 +650,7 @@ a {
   }
   .houseTitles h1 {
     font-size: 18px;
+    line-height: 25px;
   }
   .houseTitles h2 {
     font-size: 14px;
@@ -651,7 +658,6 @@ a {
   }
   .host * {
     font-size: 12px;
-    font-weight: 500;
   }
   .host .hostPicture {
     width: 32px;
@@ -659,7 +665,7 @@ a {
   }
   .globalInformations {
     flex-direction: column;
-    margin-top: 15px;
+    margin-top: 10px;
   }
   .secondaryInformations {
     flex-direction: row-reverse;
