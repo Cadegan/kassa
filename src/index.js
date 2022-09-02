@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/main.css";
 import Header from "./components/Header/index";
 import Footer from "./components/Footer/index";
-import Home from "./pages/Home/index";
-import House from "./pages/House/index";
-import About from "./pages/About/index";
+import Home from "./Pages/Home/index";
+import House from "./Pages/House/index";
+import About from "./Pages/About/index";
 import Error from "./components/Error/index";
 import reportWebVitals from "./reportWebVitals";
 
