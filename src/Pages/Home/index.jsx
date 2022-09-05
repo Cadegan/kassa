@@ -9,7 +9,6 @@ function Home() {
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  //   v2
   useEffect(() => {
     async function getData() {
       try {
@@ -34,29 +33,6 @@ function Home() {
     }
     getData();
   }, []);
-
-  /////
-
-  //   Simplified version
-  //   const getData = async () => {
-  //     const response = await fetch("./data/logements.json", {
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Accept: "application/json",
-  //       },
-  //     })
-  //       .then((response) => {
-  //         return response.json();
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //     setData(response);
-  //   };
-
-  //   useEffect(() => {
-  //     getData();
-  //   }, []);
 
   return (
     <section className="homeSection">

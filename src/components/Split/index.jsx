@@ -1,5 +1,3 @@
-/*Split function*/
-
 const SplitText = ({ textToSplit }) => {
   return (
     <div className="hostName">

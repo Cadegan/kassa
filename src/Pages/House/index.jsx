@@ -11,7 +11,6 @@ function House() {
   const [data, setData] = useState(null);
   const { id } = useParams();
 
-  //   v2
   useEffect(() => {
     const getData = async () => {
       const response = await fetch("/logements.json", {

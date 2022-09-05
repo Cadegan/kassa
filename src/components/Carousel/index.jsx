@@ -20,7 +20,6 @@ const Carousel = ({ slides }) => {
       style={{ backgroundImage: `url(${slides[current]})` }}
       src={slides[current]}
     >
-      {/* <img src={slides[current]} alt={slides[current]}></img> */}
       <div className="carousselNavigation">
         {length > 1 ? (
           <div className="prevBoutton" onClick={prevSlide}>

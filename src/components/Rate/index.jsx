@@ -1,7 +1,5 @@
-// import React from "react";
 import blankStar from "../../assets/star-blank.svg";
 import filledStar from "../../assets/star-filled.svg";
-// import "./Logement.sass";
 
 const BlankStar = () => (
   <img src={blankStar} alt="blankStar" className="blankStar" />
