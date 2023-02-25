@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/kassa/static/css/main.c1d5d44c.css",
+    "main.js": "/kassa/static/js/main.0230e6fc.js",
+    "static/js/787.2c4f37f6.chunk.js": "/kassa/static/js/787.2c4f37f6.chunk.js",
+    "static/media/about-banner.jpg": "/kassa/static/media/about-banner.328f674e9b04319ad4a7.jpg",
+    "static/media/home-banner.jpg": "/kassa/static/media/home-banner.b270daf6e91912145ba9.jpg",
+    "static/media/logo.svg": "/kassa/static/media/logo.4614be98ce0c8023c80b5c588069d70c.svg",
+    "index.html": "/kassa/index.html",
+    "static/media/arrow.svg": "/kassa/static/media/arrow.557045ea3cccdf4a6a60a53481c321e2.svg",
+    "static/media/star-blank.svg": "/kassa/static/media/star-blank.38752bcafc1045fa6b545169fb0eb2eb.svg",
+    "static/media/star-filled.svg": "/kassa/static/media/star-filled.a21f8abfc51a23975832b769119429bd.svg",
+    "main.c1d5d44c.css.map": "/kassa/static/css/main.c1d5d44c.css.map",
+    "main.0230e6fc.js.map": "/kassa/static/js/main.0230e6fc.js.map",
+    "787.2c4f37f6.chunk.js.map": "/kassa/static/js/787.2c4f37f6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1d5d44c.css",
+    "static/js/main.0230e6fc.js"
+  ]
+}
